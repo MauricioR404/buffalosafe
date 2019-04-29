@@ -62,16 +62,19 @@
                     <a href="#filesSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-file-upload"></i> Mis archivos</a>
                     <ul class="collapse list-unstyled" id="filesSubmenu">
                         <li>
-                            <a href="#">Imágenes</a>
+                            <a href="{{ route('file.create') }}">Agregar Archivo</a>
                         </li>
                         <li>
-                            <a href="#">Videos</a>
+                            <a href="{{ route('file.images') }}">Imágenes</a>
                         </li>
                         <li>
-                            <a href="#">Documentos</a>
+                            <a href="{{ route('file.videos') }}">Videos</a>
                         </li>
                         <li>
-                            <a href="#">ZIP</a>
+                            <a href="{{ route('file.documents') }}">Documentos</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('file.audios') }}">Audios</a>
                         </li>
                     </ul>
                 </li>
@@ -130,7 +133,30 @@
              @csrf
          </form>
 
+<!-- Page Content Holder -->
+    <div id="content">
 
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+
+                <button type="button" id="sidebarCollapse" class="navbar-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <div id="navbarSupportedContent">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a>@yield('page')</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+@include('admin.partials.alert')
+@include('admin.partials.error')
 
 
 
