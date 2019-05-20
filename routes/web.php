@@ -39,4 +39,14 @@ Route::patch('permisos/{id}/editar', 'Admin\PermissionsController@update')->name
 Route::patch('permisos/{id}/eliminar', 'Admin\PermissionsController@destroy')->name('permission.destroy');
 //Route::get('permisos/{id}/detalles', 'Admin\PermissionsController@show')->name('permission.show');
 
+//Users
+Route::get('usuarios', 'Admin\UsersController@index')->name('user.index');
+Route::get('usuarios/agregar', 'Admin\UsersController@create')->name('user.create');
+Route::patch('usuarios/agregar', 'Admin\UsersController@store')->name('user.store');
+Route::get('usuarios/{id}/editar', 'Admin\UsersController@edit')->name('user.edit');
+Route::patch('usuarios/{id}/editar', 'Admin\UsersController@update')->name('user.update');
+Route::patch('usuarios/{id}/eliminar', 'Admin\UsersController@destroy')->name('user.destroy');
+//Route::get('permisos/{id}/detalles', 'Admin\UsersController@show')->name('user.show');
+
+
 

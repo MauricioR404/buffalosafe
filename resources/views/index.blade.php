@@ -22,9 +22,23 @@
             </div>
          </section>
 
-         <div class="alert alert-light text-center alert-home" role="alert">
+         <div class="alert alert-light text-center alert-home" role="alert" style="color:black;">
             Descubre todo el potencial que esta aplicación tiene para ti. Disponible 24/7.
          </div>
+
+         <!-- Police -->
+          <div class="alert alert-light text-center alert-home" role="alert" style="color:black;">
+               @guest
+                  <p>El usuario a un no ha iniciado sesin</p>
+               @else
+                  @can('payforthis', Auth::user())
+                     puede suscribirse
+                  @else
+                     No puede susvribirse porque es admin
+                  @endcan
+               @endguest
+         </div>
+         <!-- /Police -->
 
          <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
             <p class="lead subtitle-home">Compara los planes y escoge el que más se adapte a lo que necesitas.</p>
