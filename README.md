@@ -1,5 +1,5 @@
 # buffalosafe
-Proyecto 
+Un proyecto creado gracias al curso de Udemy "Desarrolla una web similar a Dropbox con Laravel y Stripe", todavia faltan agregar varios modulos, pero el proyecto consiste en crear un clon de Dropbox.
 #
 1- Modulo de login - (Auth Basico)
 #
